@@ -108,6 +108,21 @@ public class Human extends Box {
 		System.out.println("brisa:" + Main.breeze[Position_y][Position_x] );
 		
 	}
+    
+    public void chestGlitter(int position_y, int position_x){
+    	if(Main.visited[Position_y][Position_x]== 0 && Main.glitter[Position_y][Position_x]== 1 ) {
+			if(Main.visited[Position_y+1][Position_x]==0) {
+			Main.probGlitter[Position_y+1][Position_x]= Main.probGlitter[Position_y+1][Position_x] + 0.33;
+			}
+			if(Main.visited[Position_y-1][Position_x]==0) {
+			Main.probGlitter[Position_y-1][Position_x]= Main.probGlitter[Position_y-1][Position_x] + 0.33;
+			}
+			if(Main.visited[Position_y][Position_x+1]==0) {
+			Main.probGlitter[Position_y][Position_x+1]= Main.probGlitter[Position_y][Position_x+1] + 0.33;
+			}
+			if(Main.visited[Position_y][Position_x-1]==0) {
+			Main.probGlitter[Position_y][Position_x-1]= Main.probGlitter[Position_y][Position_x-1] + 0.33;
+			}	
 	
 	public void danger(int position_y, int position_x) {
 

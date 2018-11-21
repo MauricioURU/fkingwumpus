@@ -11,6 +11,7 @@ public class Main extends Box {
     public static int breeze[][]= new int[6][6];
     public static int glitter[][]= new int[6][6];
     public static boolean changed[][]= new boolean[6][6];
+    public static double probGlitter[][]= new double[6][6];
     public static double probMonster[][]= new double[6][6];
     public static double probHole[][]= new double[6][6];
 	static boolean foundtreasure;
