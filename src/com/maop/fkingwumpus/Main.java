@@ -133,10 +133,15 @@ public class Main extends Box {
 		System.out.println(" ");
 		System.out.println("Huecos:");
 		human.someHoles(human.Position_y, human.Position_x);
+		
 		System.out.println(" ");
 		System.out.println("Wumpus:");
 		human.someMonsters(human.Position_y, human.Position_x);
 		visited[human.Position_y][human.Position_x]=1;
+		System.out.println("Brillo:");
+		
+		human.chestGlitter(human.Position_y, human.Position_x);
+		glitter[human.Position_y][human.Position_x]=1;
 		
 		do {
 			try{ Thread.sleep(2000); } 
@@ -226,9 +231,15 @@ public class Main extends Box {
 		System.out.println(" ");
 		System.out.println("Huecos:");
 		human.someHoles(human.Position_y, human.Position_x);
+		
 		System.out.println(" ");
 		System.out.println("Wumpus:");
 		human.someMonsters(human.Position_y, human.Position_x);
+		
+		System.out.println(" ");
+		System.out.println("Brillo:");
+		human.chestGlitter(human.Position_y, human.Position_x);
+		
 		// Actualiza las casilla
 		visited[human.Position_y][human.Position_x]=1;
 		
