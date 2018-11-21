@@ -17,6 +17,7 @@ public class Main extends Treasure {
 	static boolean foundtreasure;
 	static boolean dead;
 	public static boolean iFoundTheWumpus=false;
+	public static boolean iFoundTreasure=false;
 	
 	public static void main(String[] args) throws IOException {
 		Gameover=true;
@@ -180,6 +181,8 @@ public class Main extends Treasure {
 			pit.dangerBox(pit.Position_y,pit.Position_x);
 			pit2.dangerBox(pit2.Position_y, pit2.Position_x);
 		}
+		human.foundTreasures(human.Position_y, human.Position_x);
+		
 		
 		// verifica si el humano murio o gano 
 		if(human.Position_x==wumpus.Position_x && human.Position_y==wumpus.Position_y && secure[wumpus.Position_y][wumpus.Position_x]==0|| human.Position_x==pit.Position_x && human.Position_y==pit.Position_y || human.Position_x==pit2.Position_x && human.Position_y==pit2.Position_y) {

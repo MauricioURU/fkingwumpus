@@ -44,6 +44,21 @@ public class Human extends Box {
 		}
 	}
 	
+	public void foundTreasures(int Position_y,int Position_x) {
+		if(Main.probGlitter[Position_y+1][Position_x]>=0.66) {
+			Main.iFoundTreasure=true;
+		}
+		else if(Main.probGlitter[Position_y-1][Position_x]>=0.66) {
+			Main.iFoundTreasure=true;
+		}
+		else if(Main.probGlitter[Position_y][Position_x+1]>=0.66) {
+			Main.iFoundTreasure=true;
+		}
+		else if(Main.probGlitter[Position_y][Position_x-1]>=0.66) {
+			Main.iFoundTreasure=true;
+		}
+	}
+	
 	public void someMonsters(int Position_y,int Position_x) {
 		
 		if(Main.visited[Position_y][Position_x]== 0 && Main.stench[Position_y][Position_x]== 1 ) {
