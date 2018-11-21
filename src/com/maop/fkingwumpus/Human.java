@@ -122,7 +122,23 @@ public class Human extends Box {
 			}
 			if(Main.visited[Position_y][Position_x-1]==0) {
 			Main.probGlitter[Position_y][Position_x-1]= Main.probGlitter[Position_y][Position_x-1] + 0.33;
-			}	
+			}
+			
+    	}
+		else if( Main.glitter[Position_y][Position_x]==1){
+			Main.probGlitter[Position_y][Position_x]= 1;
+			Main.probGlitter[Position_y+1][Position_x]= 1;
+			Main.probGlitter[Position_y-1][Position_x]= 1;
+			Main.probGlitter[Position_y][Position_x+1]= 1;
+			Main.probGlitter[Position_y][Position_x-1]= 1;
+		}
+		System.out.println("Abajo:" + Main.probGlitter[Position_y+1][Position_x]);
+		System.out.println("Arriba:" + Main.probGlitter[Position_y-1][Position_x]);
+		System.out.println("Derecha:" + Main.probGlitter[Position_y][Position_x+1]);
+		System.out.println("Izquierda:" + Main.probGlitter[Position_y][Position_x-1] );
+		System.out.println("brillo:" + Main.glitter[Position_y][Position_x] );
+		
+	}
 	
 	public void danger(int position_y, int position_x) {
 
