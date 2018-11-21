@@ -125,12 +125,12 @@ public class Human extends Box {
 			}
 			
     	}
-		else if( Main.glitter[Position_y][Position_x]==1){
-			Main.probGlitter[Position_y][Position_x]= 1;
-			Main.probGlitter[Position_y+1][Position_x]= 1;
-			Main.probGlitter[Position_y-1][Position_x]= 1;
-			Main.probGlitter[Position_y][Position_x+1]= 1;
-			Main.probGlitter[Position_y][Position_x-1]= 1;
+		else if( Main.glitter[Position_y][Position_x]==0){
+			Main.probGlitter[Position_y][Position_x]= 0;
+			Main.probGlitter[Position_y+1][Position_x]= 0;
+			Main.probGlitter[Position_y-1][Position_x]= 0;
+			Main.probGlitter[Position_y][Position_x+1]= 0;
+			Main.probGlitter[Position_y][Position_x-1]= 0;
 		}
 		System.out.println("Abajo:" + Main.probGlitter[Position_y+1][Position_x]);
 		System.out.println("Arriba:" + Main.probGlitter[Position_y-1][Position_x]);

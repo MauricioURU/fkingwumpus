@@ -2,7 +2,7 @@ package com.maop.fkingwumpus;
 
 import java.io.IOException;
 
-public class Main extends Box {
+public class Main extends Treasure {
 	
 	static boolean Gameover;
 	public static int secure[][] = new int[6][6];
@@ -117,6 +117,7 @@ public class Main extends Box {
 					secure[y][x]= 2;
 					visited[y][x]=0;
 					breeze[y][x]=0;
+					glitter[y][x]=0;
 					changed[y][x]=false;
 				}
 			}
@@ -138,10 +139,10 @@ public class Main extends Box {
 		System.out.println("Wumpus:");
 		human.someMonsters(human.Position_y, human.Position_x);
 		visited[human.Position_y][human.Position_x]=1;
-		System.out.println("Brillo:");
 		
-		human.chestGlitter(human.Position_y, human.Position_x);
-		glitter[human.Position_y][human.Position_x]=1;
+		System.out.println(" ");
+		System.out.println("Tesoro:");
+		human.chestGlitter(chest.Position_y, chest.Position_x);
 		
 		do {
 			try{ Thread.sleep(2000); } 
@@ -238,7 +239,7 @@ public class Main extends Box {
 		
 		System.out.println(" ");
 		System.out.println("Brillo:");
-		human.chestGlitter(human.Position_y, human.Position_x);
+		human.chestGlitter(chest.Position_y,chest.Position_x);
 		
 		// Actualiza las casilla
 		visited[human.Position_y][human.Position_x]=1;
