@@ -142,7 +142,7 @@ public class Main extends Treasure {
 		
 		System.out.println(" ");
 		System.out.println("Tesoro:");
-		human.chestGlitter(chest.Position_y, chest.Position_x);
+		chest.chestGlitter(chest.Position_y, chest.Position_x);
 		
 		do {
 			try{ Thread.sleep(2000); } 
@@ -238,7 +238,7 @@ public class Main extends Treasure {
 		human.someMonsters(human.Position_y, human.Position_x);
 		
 		System.out.println(" ");
-		System.out.println("Brillo:");
+		System.out.println("Tesoro:");
 		human.chestGlitter(chest.Position_y,chest.Position_x);
 		
 		// Actualiza las casilla
